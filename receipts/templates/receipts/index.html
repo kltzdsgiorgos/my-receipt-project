@@ -1,0 +1,11 @@
+{% load static %}
+
+{% if receipts_list %}
+    <ul>
+    {% for receipt in receipts_list %}
+        {% comment %} <li><a href="{% url 'receipts:detail' receipts.id %}">{{ receipts.id }}</a></li> {% endcomment %}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No receipts are available.</p>
+{% endif %}
