@@ -4,6 +4,17 @@
     <ul>
     {% for receipt in receipts_list %}
         {% comment %} <li><a href="{% url 'receipts:detail' receipts.id %}">{{ receipts.id }}</a></li> {% endcomment %}
+        <ul>
+        <li>{{ receipt.fill_date }}</li>
+        <li>{{ receipt.fuel_type }}</li>
+        <li>{{ receipt.location }}</li>
+        <li>{{ receipt.gas_station }}</li>
+        <li>{{ receipt.price_per_liter }}</li>
+        <li>{{ receipt.liters }}</li>
+        <li>{{ receipt.gas_total_price }}</li>
+        <li>{{ receipt.tax_price }}</li>
+        <li>{{ receipt.total_paid }}</li>
+        </ul>
     {% endfor %}
     </ul>
 {% else %}
